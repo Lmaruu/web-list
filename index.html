@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak List</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                              url('https://images8.alphacoders.com/966/thumb-1920-966117.jpg');
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+
+            background-color: #0f0f0f;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0 40px 0;
+        }
+
+        .logo-placeholder {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            position: relative;
+            background-color: #1a1a1a;
+            border-radius: 12px; 
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 2 / 3;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 15px 30px rgba(105, 105, 105, 0.4);
+            border-color: #ffffff;
+            z-index: 10;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+            filter: brightness(60%); 
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.418); 
+            padding: 20px 10px;
+            text-align: center;
+            
+            transform: translateY(100%); 
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover .card-info {
+            transform: translateY(0); 
+        }
+
+        .card-info h3 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            background-color: #000;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">
+            <img src="https://i.ibb.co.com/5gb7SzBZ/Logo.png" alt="Logo">
+        </div>
+        <p>Peak Anime and Manga List</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/f8/fa/cf/f8facf651a43a4e1318b532c78a88c05.jpg" alt="Poster">
+            <div class="card-info">
+                <span class="badge">Anime</span>
+                <h3>JoJo's Bizarre Adventure</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/80/66/e2/8066e24f696a559f861ffb027979fbb5.jpg" alt="Poster">
+            <div class="card-info">
+                <span class="badge">Manga</span>
+                <h3>Berserk</h3>
+            </div>
+        </div>
+
+        <div class="card"><img src="https://i.pinimg.com/736x/93/7f/a7/937fa71bcd8e44772a350c237e46f2fb.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Chainsaw Man</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/62/b9/4c/62b94c7d85309d5cbd311aba22221284.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Tokyo Ghoul</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/9d/96/19/9d961950a3471983df3f55f2d7228aee.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Death Note</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/7f/74/3f/7f743ff019f4e0bc97a2a9994d1a6a29.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Highschool of the Dead</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/1200x/f8/9f/d7/f89fd783bee2e8bf50d6edc1682f8740.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Vinland Saga</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/1200x/e4/0d/2e/e40d2ea3ee5776d85bb0052329211255.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Bleach</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/c8/a6/dd/c8a6dd22fa8d6fd93b5aa8c11cde22e4.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Hellsing</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/ed/93/01/ed9301c100d40e50be33078f49833ecd.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Gantz</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/1200x/ae/d5/dd/aed5dd02663f300b501ba86e5065b56c.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Neon Genesis Evangelion</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/1200x/7b/b9/43/7bb943d85e97750ace07515a90b631f7.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Shiki</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/1200x/46/a9/d2/46a9d2bfa84df599895861a34ce46ae7.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Choujin X</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/1200x/f5/b0/88/f5b08876558cf54408b65ab2f206e930.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Jūjika no Rokunin</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/1200x/d7/ed/a2/d7eda2c511524e5cfcbc7f0a4bb881b6.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Sankarea</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/736x/43/20/d4/4320d46ca10ec0746a8156ccd0dfe49d.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Monster</h3></div></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/7e/0b/f6/7e0bf60b6ce82ab04e96d785a565683f.jpg" alt=""><div class="card-info"><span class="badge">Manga</span><h3>Alice in Borderland</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/236x/23/05/31/2305312150e557aaafba4feae2b6555c.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Kakegurui</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/236x/8d/7f/35/8d7f359666cfe29495488b09116a8c65.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Steins;Gate</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/1200x/29/90/27/299027a913864fa871a92a52606f5c90.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Zankyou no Terror</h3></div></div>
+        <div class="card"><img src="https://i1-e.pinimg.com/736x/62/09/99/620999de88a64872c2c6f553faec42d8.jpg" alt=""><div class="card-info"><span class="badge">Anime</span><h3>Code Geass</h3></div></div>
+
+    </div>
+
+</body>
+</html>
